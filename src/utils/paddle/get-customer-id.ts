@@ -1,7 +1,7 @@
 import { createClient } from '@/utils/supabase/server';
 
 export async function getCustomerId() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const user = await supabase.auth.getUser();
   if (user.data.user?.email) {
     const customersData = await supabase

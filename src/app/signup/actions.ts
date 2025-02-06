@@ -11,7 +11,7 @@ interface FormData {
 }
 
 export async function signup(data: FormData) {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { error } = await supabase.auth.signUp(data);
 
   if (error) {

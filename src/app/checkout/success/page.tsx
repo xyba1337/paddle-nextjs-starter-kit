@@ -7,7 +7,7 @@ import '../../../styles/checkout.css';
 import { createClient } from '@/utils/supabase/server';
 
 export default async function SuccessPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data } = await supabase.auth.getUser();
 
   return (

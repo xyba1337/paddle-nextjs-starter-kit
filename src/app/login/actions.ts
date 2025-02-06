@@ -9,7 +9,7 @@ interface FormData {
   password: string;
 }
 export async function login(data: FormData) {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { error } = await supabase.auth.signInWithPassword(data);
 
   if (error) {
@@ -21,7 +21,7 @@ export async function login(data: FormData) {
 }
 
 export async function signInWithGithub() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data } = await supabase.auth.signInWithOAuth({
     provider: 'github',
     options: {
@@ -34,7 +34,7 @@ export async function signInWithGithub() {
 }
 
 export async function loginAnonymously() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { error: signInError } = await supabase.auth.signInAnonymously();
   const { error: updateUserError } = await supabase.auth.updateUser({
     email: `anonymous+${Date.now().toString(36)}@example.com`,
