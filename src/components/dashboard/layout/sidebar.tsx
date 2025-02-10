@@ -26,7 +26,7 @@ const sidebarItems = [
 export function Sidebar() {
   const pathname = usePathname();
   return (
-    <nav className="flex flex-col flex-grow justify-between items-start px-2 text-sm font-medium lg:px-4">
+    <nav className="flex flex-col grow justify-between items-start px-2 text-sm font-medium lg:px-4">
       <div className={'w-full'}>
         {sidebarItems.map((item) => (
           <Link

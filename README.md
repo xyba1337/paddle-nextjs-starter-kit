@@ -26,7 +26,7 @@ This starter kit is built with:
 
 - **Framework:** [Next.js](https://nextjs.org/)
 - **Auth and user management:** [Supabase](https://supabase.com/)
-- **Component library:** [Ant Design](https://ant.design/)
+- **Component library:** [shadcn/ui](https://ui.shadcn.com/)
 - **CSS framework:** [Tailwind](https://tailwindcss.com/)
 - **Billing solution**: [Paddle Billing](https://www.paddle.com/billing?utm_source=dx&utm_medium=paddle-nextjs-starter-kit)
 

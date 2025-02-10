@@ -21,7 +21,7 @@ export function DashboardLayout({ children }: Props) {
               <Image src={'/assets/icons/logo/aeroedit-logo-icon.svg'} alt={'AeroEdit'} width={41} height={41} />
             </Link>
           </div>
-          <div className="flex flex-col flex-grow">
+          <div className="flex flex-col grow">
             <Sidebar />
             <SidebarUserInfo />
           </div>
