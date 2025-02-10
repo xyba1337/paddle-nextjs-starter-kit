@@ -38,6 +38,7 @@ export function CheckoutContents({ userEmail }: Props) {
         },
         checkout: {
           settings: {
+            variant: 'one-page',
             displayMode: 'inline',
             theme: 'dark',
             allowLogout: !userEmail,
