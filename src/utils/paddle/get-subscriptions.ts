@@ -17,6 +17,7 @@ export async function getSubscriptions(): Promise<SubscriptionResponse> {
         totalRecords: subscriptionCollection.estimatedTotal,
       };
     }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     return getErrorMessage();
   }

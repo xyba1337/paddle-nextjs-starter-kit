@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
   try {
     if (signature && rawRequestBody) {
       const paddle = getPaddleInstance();
-      const eventData = paddle.webhooks.unmarshal(rawRequestBody, privateKey, signature);
+      const eventData = await paddle.webhooks.unmarshal(rawRequestBody, privateKey, signature);
       status = 200;
       eventName = eventData?.eventType ?? 'Unknown event';
       if (eventData) {

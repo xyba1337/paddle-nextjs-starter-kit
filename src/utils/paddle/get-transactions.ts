@@ -26,6 +26,7 @@ export async function getTransactions(subscriptionId: string, after: string): Pr
     } else {
       return { data: [], hasMore: false, totalRecords: 0 };
     }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     return getErrorMessage();
   }

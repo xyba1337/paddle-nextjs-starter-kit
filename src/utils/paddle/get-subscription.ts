@@ -15,6 +15,7 @@ export async function getSubscription(subscriptionId: string): Promise<Subscript
 
       return { data: parseSDKResponse(subscription) };
     }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     return { error: ErrorMessage };
   }

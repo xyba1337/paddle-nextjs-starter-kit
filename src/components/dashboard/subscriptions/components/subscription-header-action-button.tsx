@@ -35,7 +35,7 @@ export function SubscriptionHeaderActionButton({ subscriptionId }: Props) {
           ),
         });
       })
-      .catch((error) => {
+      .catch(() => {
         toast({
           description: (
             <div className={'flex items-start gap-3'}>

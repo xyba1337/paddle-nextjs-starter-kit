@@ -32,8 +32,6 @@ const teamMembers = [
   },
 ];
 
-const roles = ['Owner', 'Member', 'Guest'];
-
 export function DashboardTeamMembersCard() {
   return (
     <Card className={'bg-background/50 backdrop-blur-[24px] border-border p-6'}>
