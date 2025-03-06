@@ -37,7 +37,7 @@ export async function loginAnonymously() {
   const supabase = await createClient();
   const { error: signInError } = await supabase.auth.signInAnonymously();
   const { error: updateUserError } = await supabase.auth.updateUser({
-    email: `anonymous+${Date.now().toString(36)}@example.com`,
+    email: `anonymous+${Date.now().toString(36)}@supabase.io`,
   });
 
   if (signInError || updateUserError) {
